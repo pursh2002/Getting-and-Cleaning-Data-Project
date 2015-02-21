@@ -74,5 +74,5 @@ tidyData    = aggregate(finalDataNoActivityType[,names(finalDataNoActivityType) 
 # Merging the tidyData with activityType to include descriptive acitvity names
 tidyData    = merge(tidyData,activityType,by='activityId',all.x=TRUE);
 
-# Export the tidyData set 
+# tidyData set 
 write.table(tidyData, './tidyData.txt',row.names=FALSE,sep='\t');
