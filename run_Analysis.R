@@ -1,4 +1,4 @@
-#You should create one R script called run_analysis.R that does the following. 
+#performing run_analysis.R that does the following. 
 #1Merges the training and the test sets to create one data set.
 #1Extracts only the measurements on the mean and standard deviation for each measurement. 
 #2Uses descriptive activity names to name the activities in the data set
