@@ -22,4 +22,4 @@ Variables
 6. subject_test.txt
 7. x_test.txt
 8. y_test.txt
-contain the data from the downloaded files on whic data are read and analysed.
+contain the data from the downloaded files on whic data are read and analysed throught he steps mentioned above.
