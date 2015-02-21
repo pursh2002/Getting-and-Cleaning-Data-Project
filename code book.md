@@ -23,3 +23,9 @@ Variables
 7. x_test.txt
 8. y_test.txt
 contain the data from the downloaded files on whic data are read and analysed throught he steps mentioned above.
+
+The exercise were performed with help from 
+https://github.com/hglennrock/getting-cleaning-data-project
+https://github.com/OscarPDR/Coursera-Getting-and-Cleaning-Data-Course-Project
+https://bitbucket.org/maurotrb/getting-cleaning-data-2014-project/src
+https://rstudio-pubs-static.s3.amazonaws.com/30578_9519a6fce3524cc5a21dfba8c9ef6e69.html
