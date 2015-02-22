@@ -8,6 +8,7 @@
 #Processing the data
 
 #sets working directory 
+#sets working directory 
 setwd("E:/Directory.R/getdataprojects/UCI HAR Dataset")
 
 #Imports and Reads in the data
@@ -18,11 +19,12 @@ xTrain = read.table('./train/x_train.txt',header=FALSE)
 subjectTrain = read.table('./train/subject_train.txt',header=FALSE)
 activityType = read.table('./activity_labels.txt',header=FALSE)
 subjectTest = read.table('./test/subject_test.txt',header=FALSE); 
+features   = read.table('./test/features.txt,header=FALSE);
 
 #Data Cleaning
 #giving column names to the data
 
-colnames(activityType) = c('activityId','activityType');
+colnames(activityType) = c("activityId","activityType");
 colnames(subjectTrain) = "subjectId";
 colnames(xTrain) = features[,2]; 
 colnames(subjectTest) = "subjectId";
@@ -56,7 +58,7 @@ finalData = finalData[Measurment==TRUE];
 #Asignment 3: Use descriptive activity names to name the activities in the data set
 
 #Merging the finalData set with the acitivityType table
-finalData = merge(finalData,activityType,by='activityId',all.x=TRUE);
+finalData = merge(finalData,activityType,by="activityId",all.x=TRUE);
 
 #Updating the colNames
 colNames  = colnames(finalData); 
@@ -66,13 +68,17 @@ colNames  = colnames(finalData);
 
 #Create a new table, finalDataNoActivityType without the activityType column
 
-finalDataNoActivityType  = finalData[,names(finalData) != 'activityType'];
+finalDataNoActivityType  = finalData[,names(finalData) != "activityType"];
 
 # Summarizing the finalDataNoActivityType table 
-tidyData    = aggregate(finalDataNoActivityType[,names(finalDataNoActivityType) != c('activityId','subjectId')],by=list(activityId=finalDataNoActivityType$activityId,subjectId = finalDataNoActivityType$subjectId),mean);
+tidyData    = aggregate(finalDataNoActivityType[,names(finalDataNoActivityType) != c("activityId","subjectId")],by=list(activityId=finalDataNoActivityType$activityId,subjectId = finalDataNoActivityType$subjectId),mean);
 
 # Merging the tidyData with activityType to include descriptive acitvity names
-tidyData    = merge(tidyData,activityType,by='activityId',all.x=TRUE);
+tidyData    = merge(tidyData,activityType,by="activityId",all.x=TRUE);
 
-# tidyData set 
-write.table(tidyData, './tidyData.txt',row.names=FALSE,sep='\t');
+# Export the tidyData set 
+write.table(tidyData, "./tidyData.txt",row.names=FALSE,sep="\t");
+
+
+
+
