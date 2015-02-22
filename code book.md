@@ -13,7 +13,24 @@ The script run_analysis.R performs the following  steps towards course project
 9. tidy data with write.table() using row.name=FALSE
 
 Variables
+subject test has i variable and 2947 observations
+subjecttrain has 1 variable and 7352 observations
+xtest has 561 variable and 2947 observation
+xtrain 7352 obs of 561 variables
+ytest has 2947 obs of 1 varibale
+ytrain has i variable and 7352 observations
+activity types 6  obs and 2 variables 
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+features has 561 observations and 2 variables 
+in training data activity , subjectid and other variables re merged making a single file
 
+final data has 3 variables and 10299 observations 
+tidydata has 180 observations nd 3 varibles 
 1.features.txt
 2. activity_labels.txt
 3.subject_train.txt
@@ -22,6 +39,8 @@ Variables
 6. subject_test.txt
 7. x_test.txt
 8. y_test.txt
+
+
 contain the data from the downloaded files on whic data are read and analysed throught he steps mentioned above.
 
 The exercise were performed with help from 
